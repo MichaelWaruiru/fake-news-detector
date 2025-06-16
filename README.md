@@ -175,7 +175,7 @@ Feel free to use, modify, and share!
 
 ## 👤 Author
 
-[MichaelWaruiru]  
+[Michael Waruiru]  
 [https://github.com/MichaelWaruiru]
 
 ---
