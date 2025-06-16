@@ -32,11 +32,12 @@ def index():
               user_text = extract_text_from_url(user_text)
             pred_proba = pipeline.predict_proba([user_text])[0]
             pred = pipeline.predict([user_text])[0]
-            prediction = "True/Real" if pred == 1 else "Fake/False"
+            label = "real" if pred == 1 else "fake"
+            prediction = "True/Real" if label == "real" else "Fake/False"
             proba = round(100 * max(pred_proba), 2)
           except Exception as e:
             prediction = "Error processing the input. Please try again."
-    return render_template("index.html", prediction=prediction, proba=proba, user_text=user_text)
+    return render_template("index.html", prediction=prediction, proba=proba, user_text=user_text, label=label)
 
 # API Endpoint for AJAX/mobile use
 @app.route("/api/predict", methods=["POST"])
