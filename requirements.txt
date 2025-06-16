@@ -5,3 +5,5 @@ flask
 gunicorn
 newspaper3k
 validators
+lxml
+lxml_html_clean
