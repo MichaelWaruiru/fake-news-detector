@@ -28,7 +28,7 @@
                         </div>
                     </form>
                     {% if prediction %}
-                    <div class="alert mt-4 {{ 'alert-success' if prediction == 'True/Real' else 'alert-danger' }} text-center" role="alert">
+                    <div class="alert mt-4 alert-{{ 'success' if label == 'real' else 'danger' }} text-center" role="alert">
                         <h4>{{ prediction }}</h4>
                         <p>Confidence: {{ proba }}%</p>
                     </div>

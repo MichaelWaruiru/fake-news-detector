@@ -1,12 +1,20 @@
 body {
   background: #f8fafc;
 }
+
 .card {
   border-radius: 1rem;
 }
+
 .btn-lg {
   font-size: 1.2rem;
 }
+
 textarea {
   resize: vertical;
+}
+
+.alert h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
