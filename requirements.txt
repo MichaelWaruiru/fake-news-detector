@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+joblib
+flask
+gunicorn
+newspaper3k
+validators
