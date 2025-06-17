@@ -1,6 +1,6 @@
-# 📰 Real-Time Fake News Detector
+# 📰 Real-Time Kenyan Fake News Detector
 
-A real-time web-based machine learning app that detects whether a news article is **Real** or **Fake** using Logistic Regression and Natural Language Processing (TF-IDF). Built with Flask, scikit-learn, and Bootstrap.
+A real-time web-based machine learning app that detects news about Kenyan government and politicians whether they're **Real** or **Fake** using Logistic Regression and Natural Language Processing (TF-IDF). Built with Flask, scikit-learn, and Bootstrap.
 
 ---
 
@@ -22,11 +22,12 @@ fake-news-detector/
 ├── app.py                  # Flask app (web UI + API)
 ├── model/
 │   ├── train_model.py      # Model training script
+    ├──kenya_collect.py     # Scrape Kenyan news
 │   ├── model.pkl           # Saved ML pipeline (after training)
 ├── templates/
 │   └── index.html          # Web UI template (Bootstrap)
 ├── static/
-│   └── style.css           # (Optional) Custom styles
+│   └── style.css           # Custom styles
 ├── requirements.txt        # Python dependencies
 └── README.md               # This file
 ```
@@ -37,14 +38,13 @@ fake-news-detector/
 
 ### Dataset
 
-* Download `Fake.csv` and `True.csv` from:
-  [Fake and Real News Dataset](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
+* Dataset is obtained from scrapping news sources.
 
 ### Prepare Combined Dataset
 
 ```bash
 cd models
-python prepare_data.py  # Generates news.csv with binary labels
+python kenya_collect.py  # Scrape Kenyan news
 ```
 
 ### Train the Model
@@ -160,7 +160,7 @@ Note: Free LFS storage is limited; for big datasets, you may hit quota.
 
 ## ✨ Credits
 
-* Dataset: [Fake and Real News Dataset](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
+* Dataset: Local news sources
 * ML/NLP: scikit-learn, TfidfVectorizer
 * UI: Bootstrap 5
 
