@@ -8,13 +8,13 @@ import joblib
 # import os
 
 # Load your dataset
-df = pd.read_csv('news.csv')  # Must have 'text' and 'label' columns
+df = pd.read_csv('kenyan_news.csv')  # Must have 'text' and 'label' columns
 
 # Basic preprocessing (remove NAs)
-df.dropna(subset=['text', 'subject'], inplace=True)
+df.dropna(subset=['text', 'label'], inplace=True)
 
 X = df['text']
-y = df['subject']
+y = df['label']
 
 # Split data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)

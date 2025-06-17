@@ -34,6 +34,12 @@
                     </div>
                     {% endif %}
                 </div>
+                {% if mentions and mentions|length > 0 %}
+                    <div class="alert alert-warning text-center mt-2">
+                        <strong>Politician(s) mentioned:</strong>
+                        {{ mentions|join(", ") }}
+                    </div>
+                {% endif %}
                 <div class="card-footer text-center small text-muted">
                     Fake News Detector &copy;
                 </div>
