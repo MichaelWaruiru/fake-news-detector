@@ -21,8 +21,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # Build pipeline: TF-IDF + Logistic Regression
 pipeline = Pipeline([
-    ('tfidf', TfidfVectorizer(stop_words='english', max_features=10000)),
-    ('clf', LogisticRegression(max_iter=1000))
+    ("tfidf", TfidfVectorizer(stop_words="english", max_features=10000)),
+    ("clf", LogisticRegression(max_iter=1000))
 ])
 
 # Train
