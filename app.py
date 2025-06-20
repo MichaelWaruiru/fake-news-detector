@@ -62,6 +62,8 @@ POLITICIANS = [
   # Add more as needed
 ]
 
+POLITICIANS = list(set(POLITICIANS))
+
 def extract_text_from_url(url):
   article = Article(url)
   article.download()
@@ -69,8 +71,7 @@ def extract_text_from_url(url):
   return article.text
 
 def detect_politician(text):
-  mentions = [p for p in POLITICIANS if p.lower() in text.lower()]
-  return mentions
+  return list({p for p in POLITICIANS if p.lower() in text.lower()})
 
 
 @app.route("/", methods=["GET", "POST"])
